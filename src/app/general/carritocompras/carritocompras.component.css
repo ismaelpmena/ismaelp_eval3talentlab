@@ -1,0 +1,23 @@
+#carro {
+    font-size: 35px;
+}
+
+#bro {
+    background-color: rgba(137, 255, 101, 0.89);
+}
+
+.tcolor {
+    background-color: rgba(137, 255, 101, 0.89);
+}
+
+#tabla {
+    background-color: rgba(82, 202, 45, 0.89);
+}
+
+.btn {
+    background-color: rgba(0, 0, 0, 0.89);
+}
+
+.form-control {
+    background-color: rgba(255, 196, 196, 0.89);
+}

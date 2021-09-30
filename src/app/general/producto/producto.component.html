@@ -1,0 +1,16 @@
+<div class="container" *ngFor='let item of productoService.productos'>
+    <div class="row-cols-2">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.nombre}}</h5>
+                    <p class="card-text"><img src='{{item.img}}' width="300px" alt="hamburguesas"></p>
+                    <p class="card-text">${{item.precio}}</p>
+                    <p class="card-text">{{item.descripcion}}</p>
+                    <p class="card-text"> Categoria:{{categoriaService.cate.hamburguesas}}</p>
+                    <a href="carritodecompras" class="btn btn-primary">comprar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

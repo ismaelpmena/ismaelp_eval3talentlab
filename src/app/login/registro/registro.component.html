@@ -1,0 +1,32 @@
+<form (ngSubmit)="insertar()">
+    <h2>Registro</h2>
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input [(ngModel)]="nombre" name="nombre" type="nombre" required minlength="4" class="form-control" id="nombre" aria-describedby="nombreHelp">
+
+    </div>
+    <div class="mb-3">
+        <label for="apellido" class="form-label">Apellido</label>
+        <input [(ngModel)]="apellido" name="apellido" type="apellido" class="form-control" id="apellido" aria-describedby="apellidoHelp">
+        <div id="apellidoHelp" class="form-text">Nunca compartiremos su apellido con nadie más.</div>
+
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Correo Electronico</label>
+        <input [(ngModel)]="email" name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Contraseña</label>
+        <input [(ngModel)]="password" name="password" type="password" class="form-control" id="password">
+
+
+
+    </div>
+    <button type="submit" class="btn btn-success">Ingresar</button>
+</form>
+
+{{Anuncio}}
+<hr><br> {{nombre}}{{apellido}}{{email}} {{password}}
+<br>

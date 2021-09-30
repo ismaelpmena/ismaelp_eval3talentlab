@@ -1,0 +1,59 @@
+<div class="container">
+    <label id="carro" for="basic-url" class="form-label">hamburguesas
+        <div class="col">
+            <form (submit)="buscarProducto()" class="d-flex">
+                <input [(ngModel)]="buscarlisto" name="buscarlisto" class="form-control me-2" type="search" placeholder="Buscar por id" aria-label="Buscar"> 
+                <button class="btn btn-success" type="submit">Buscar</button>
+            </form>
+        </div>
+    </label>
+    <br>
+    <!--tabla del los productos para comprar-->
+    <table class="table table-primary " id="tabla">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col">Producto</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Precio</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of carritocomprasService.listaproductos['productos']">
+            <tr *ngIf="item.nombre == buscarlisto || item.id == buscarlisto || buscarlisto== null || buscarlisto == ''">
+                <!-- form con los datos de nombre precio cantidad img id-->
+                <th scope="row">{{item.id}}</th>
+                <td> <img src='{{item.img}}' style="width: 150px; height: 150px" alt="imagen de hamburguesa"> </td>
+                <td>{{item.nombre}}</td>
+                <td> {{item.cantidad}} </td>
+                <td>${{item.precio}}</td>
+                <td>
+                    <button type="button" (click)="agregarCarrito(item.id, item.precio)" class="btn btn-success">Comprar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <label>hamburguesas compradas</label>
+    <table id="bro" class="table table-info ">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of carritocomprasService.listaproductos['productos']; index as i">
+            <tr *ngFor="let itemm of carritocompras">
+                <th scope="row" *ngIf="itemm == (i+1)">{{item.id}}</th>
+                <td *ngIf="itemm == (i+1)">{{item.nombre}}</td>
+                <td *ngIf="itemm == (i+1)">${{item.precio}}</td>
+                <td *ngIf="itemm == (i+1)">
+                    <button type="button" (click)="eliminar(itemm, item.precio)" class="btn btn-success">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <label id="carro" for="basic-url" class="form-label">El total a Pagar es : ${{total}}</label>
+</div>

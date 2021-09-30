@@ -1,0 +1,56 @@
+{
+    "productos": [{
+            "id": 1,
+            "nombre": "italiano",
+            "descripcion": "hamburguesa muy rica de carne tomate palta ",
+            "precio": 2000,
+            "cantidad": 4,
+            "img": "assets/img/italiano.jpg"
+        },
+        {
+            "id": 2,
+            "nombre": "barros luco",
+            "descripcion": "hamburguesa de carne y queso",
+            "precio": 6000,
+            "cantidad": 6,
+            "img": "assets/img/barrosluco.jpg"
+
+        },
+        {
+            "id": 3,
+            "nombre": "chacarero",
+            "descripcion": "hammburguesa con mas ingredientes",
+            "precio": 2000,
+            "cantidad": 5,
+            "img": "assets/img/chacarero.jpg"
+
+        },
+        {
+            "id": 4,
+            "nombre": "hamburguesa de pollo",
+            "descripcion": "hamburguesa normal pero con pollo",
+            "precio": 4000,
+            "cantidad": 9,
+            "img": "assets/img/chicken.jpg"
+
+        },
+        {
+            "id": 5,
+            "nombre": "hamburguesa vegetariana",
+            "descripcion": "hamburguesa sin nada de carne",
+            "precio": 8000,
+            "cantidad": 8,
+            "img": "assets/img/vegetariana.jpg"
+
+        },
+        {
+            "id": 6,
+            "nombre": "hamburguesa de pescado",
+            "descripcion": "hamburguesa normal pero con pescado",
+            "precio": 7000,
+            "cantidad": 2,
+            "img": "assets/img/pescado.jpg"
+
+        }
+    ]
+}
